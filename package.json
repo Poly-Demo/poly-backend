@@ -6,7 +6,7 @@
     "dev": "tsx --conditions source apps/api/src/main.ts",
     "build": "tsc -b",
     "start": "node apps/api/dist/main.js",
-    "test": "pnpm --filter './apps/*' --filter './packages/*' -r --if-present test",
+    "test": "pnpm build && pnpm --filter './apps/*' --filter './packages/*' -r --if-present test",
     "lint": "eslint .",
     "clean": "find apps packages -name dist -type d -prune -exec rm -rf {} +"
   },
